@@ -666,6 +666,7 @@ footer,
   text-transform: uppercase;
 }
 .mobile_nav_wrapper .nav_mobile .bottom-buttons .btn-phone {
+  display: none;
   color: #fff;
   padding-left: 30px;
   background: url(images/phone-small.svg) no-repeat 20px center;
