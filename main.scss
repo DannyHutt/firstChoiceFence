@@ -179,7 +179,7 @@ footer,
 
 .logo {
     margin:0;
-    background:url(images/logo.svg) top left no-repeat;
+    background:url(images/logo.svg) top center no-repeat;
     background-size:contain;
     transition: 0.2s;
     width:222px;
@@ -732,6 +732,7 @@ footer,
         width:150px;
         height: 53px;
         min-width:150px;
+        
     }
 
     .header_main .wrapper .nav_main,
