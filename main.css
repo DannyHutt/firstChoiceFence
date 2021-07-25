@@ -871,6 +871,9 @@ footer .wrapper {
     padding-right: 0;
   }
 
+  .header_main {
+    position: static;
+  }
   .header_main .wrapper {
     height: 75px;
   }
@@ -939,7 +942,7 @@ footer .wrapper {
   }
 
   .container {
-    padding-top: 70px;
+    padding-top: 0;
   }
 
   .section_hero .col {
