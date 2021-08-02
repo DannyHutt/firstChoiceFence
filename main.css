@@ -116,13 +116,16 @@ nav button.active {
   font-size: 24px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
-  padding-right: 41px;
+  padding-right: 60px;
   background-image: url(images/arrow-right-circle_24px.svg);
-  background-position: center right;
+  background-position: 150px center;
   background-repeat: no-repeat;
   position: absolute;
   bottom: 120px;
   right: 0;
+}
+.btn.btn-special:hover {
+  background-position: 170px center;
 }
 .btn.link {
   padding: 0;
@@ -136,9 +139,9 @@ nav button.active {
   padding: 0;
   margin-top: auto;
   align-self: flex-start;
-  padding-right: 41px;
+  padding-right: 60px;
   background-image: url(images/arrow-right-orange_24px.svg);
-  background-position: center right;
+  background-position: 60px center;
   background-repeat: no-repeat;
 }
 
@@ -233,6 +236,7 @@ footer,
 .header_main.small .wrapper .nav_main {
   margin: 0 13%;
   font-size: 18px;
+  max-width: 600px;
 }
 .header_main.small .wrapper .nav_main a {
   padding-top: 5px;
@@ -319,6 +323,15 @@ footer,
   padding-top: 120px;
   background: #fff;
 }
+.section_dobest a {
+  text-decoration: none;
+}
+.section_dobest a:hover .btn-small-text {
+  background-position: 80px center;
+}
+.section_dobest a:hover .card .image-box img {
+  width: 130%;
+}
 .section_dobest .wrapper {
   display: flex;
   justify-content: center;
@@ -347,21 +360,34 @@ footer,
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 .section_dobest .card h3 {
   margin: 0 0 20px;
+  color: var(--color-dark-text);
 }
 .section_dobest .card p {
   padding: 0;
+  color: var(--color-light-text);
 }
-.section_dobest .card img {
+.section_dobest .card .image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   width: 100%;
+  max-width: 100%;
+  height: 106px;
+}
+.section_dobest .card .image-box img {
+  width: 102%;
+  transition: 0.2s;
 }
 .section_dobest .card .card-content {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .section_testimonial {
@@ -521,6 +547,9 @@ footer,
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 20px 20px 60px rgba(193, 193, 193, 0.35);
+}
+.section_style .style-card .btn-small-text {
+  background-position: 90px center;
 }
 .section_style .style-card .col1 {
   height: 272px;

@@ -121,13 +121,16 @@ nav {
         font-size:24px;
         font-weight: bold;
         font-family: 'Raleway', sans-serif;
-        padding-right:41px;
+        padding-right:60px;
         background-image:url(images/arrow-right-circle_24px.svg);
-        background-position:center right;
+        background-position: 150px center;
         background-repeat:no-repeat;
         position: absolute;
         bottom: 120px;
         right: 0;
+        &:hover {
+            background-position: 170px center;
+        }
     }
     &.link {
         padding:0;
@@ -141,9 +144,9 @@ nav {
         padding:0;
         margin-top: auto;
         align-self: flex-start;
-        padding-right:41px;
+        padding-right:60px;
         background-image:url(images/arrow-right-orange_24px.svg);
-        background-position:center right;
+        background-position: 60px center;
         background-repeat:no-repeat;
     }
 }
@@ -244,6 +247,7 @@ footer,
             .nav_main {
                 margin: 0 13%;
                 font-size:18px;
+                max-width:600px;
                 a {
                     padding-top:5px;
                     &.on {
@@ -336,6 +340,26 @@ footer,
 .section_dobest {
     padding-top:120px;
     background:#fff;
+    a {
+        text-decoration: none;
+        &:hover {
+            .btn-small-text {
+                background-position: 80px center;
+            }
+            .card {
+                // background:var(--color-primary-blue);
+                // h3,
+                // p {
+                //     color:#fff;
+                // }
+                .image-box {
+                    img {
+                        width:130%;
+                    }
+                }
+            }
+        }
+    }
     .wrapper{
         display:flex;
         justify-content:center;
@@ -359,25 +383,39 @@ footer,
         border:1px solid var(--color-primary-blue);
         background:#fff;
         height:400px;
+        // transition:.2s;
         width:400px;
         border-radius:8px;
         margin-bottom:16px;
         display:flex;
         flex-direction:column;
+        text-decoration:none;
         h3{
             margin:0 0 20px;
+            color:var(--color-dark-text);
         }
         p {
             padding:0;
+            color:var(--color-light-text);
         }
-        img {
+        .image-box {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            overflow:hidden;
             width:100%;
+            max-width:100%;
+            height:106px;
+            img {
+                width:102%;
+                transition:.2s;
+            }
         }
         .card-content {
             padding:40px;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            flex-grow:1;
         }
     }
 }
@@ -542,6 +580,9 @@ footer,
         border-radius:8px;
         overflow:hidden;
         box-shadow:20px 20px 60px rgba(193,193,193,.35);
+        .btn-small-text {
+            background-position:90px center;
+        }
         .col1 {
             height: 272px;
         }
