@@ -303,7 +303,7 @@ footer,
 }
 
 
-.section_materials {
+.section_about {
     background-color:#fff;
     padding-bottom:100px;
     text-align:center;
@@ -384,6 +384,7 @@ footer,
         background:#fff;
         height:400px;
         // transition:.2s;
+        overflow: hidden;
         width:400px;
         border-radius:8px;
         margin-bottom:16px;
@@ -426,6 +427,7 @@ footer,
     padding-top:80px;
     .wrapper {
         display:flex;
+        background:#F4F8FF;
     }
     .col {
         width:50%;
@@ -452,6 +454,7 @@ footer,
         h2 {
             padding-right:16%;
             color:var(--color-primary-blue);
+            margin-top:80px;
         }
     }
 }
@@ -987,7 +990,10 @@ footer,
 
     .section_dobest .card {
         margin:20px auto;
-        width:90%;
+        width:100%;
+        .image-box {
+            align-items:unset;
+        }
     }
 
     .section_dobest .wrapper .col1,

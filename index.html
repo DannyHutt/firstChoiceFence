@@ -14,7 +14,7 @@
     <title>1st Choice Fence</title>
 
 </head>
-<body>
+<body id="Body">
 
 
     <header class="header_main" id="header">
@@ -27,11 +27,11 @@
             </h1>
 
             <nav class="nav_main">
-                <a class="navlink home on" onclick="scrollToElementId('home')">Home</a>
+                <a class="navlink home on" onclick="scrollToElementId('Body')">Home</a>
                 <a class="navlink services" onclick="scrollToElementId('About')">About</a>
+                <a class="navlink trust"  onclick="scrollToElementId('Work')">Our Work</a>
                 <a class="navlink contact" onclick="scrollToElementId('Styles')">Styles</a>
-                <a class="navlink trust"  onclick="scrollToElementId('Out Work')">Our Work</a>
-                <a class="navlink trust"  onclick="scrollToElementId('Contact Us')">Contact Us</a>
+                <a class="navlink trust"  onclick="scrollToElementId('Contact')">Contact Us</a>
             </nav>
 
             <button class="btn btn-primary btn-phone">
@@ -44,13 +44,13 @@
 
     <div class="container">
 
-        <section id="home" class="section_hero">
+        <section id="Home" class="section_hero">
             <div class="wrapper">
                 <div class="col col1">
 
                     <h1>Crafting every fence with <span>care.</span></h1>
 
-                    <p class="headline">We will help you create the best fence you've ever seen.</p>
+                    <p class="headline">We’ll help you choose the right fence while providing quality work at a sensible price.</p>
                     <button onclick="scrollToElementId('contact')" class="btn btn-primary">Get a Quote</button>
 
                 </div>
@@ -60,10 +60,13 @@
             </div>
         </section>
 
-        <section class="section_materials">
+        <section id="About" class="section_about">
            <div class="wrapper">
-                <h2>We always use the best materials available</h2>
-                <p>Some information about the materials or options can go hereSome information about the materials or options can go here</p>
+
+                <h2>About us</h2>
+                <p>We are a family business and we have been installing fences for over 20 years. We know how to install your fence the right way.</p>
+                <p>We use the highest quality materials and back them with an outstanding installation warranty.</p>
+
                 <div class="pane-strip">
                     <div class="img1">
                         <img src="images/materials-1.png" alt="">
@@ -143,12 +146,12 @@
                     <img src="images/quote-image.png" alt="">
                 </div>
                 <div class="col col2">
-                    <h2>“1st Choice Fence did an excellent job, i would reccommend them!”</h2>
+                    <h2>“We take great pride in our work, treating each fence like its our own”</h2>
                 </div>
              </div>
          </section>
 
-         <section class="section_latest">
+         <section id="Work" class="section_latest">
             <div class="wrapper">
                  <h2>Our Latest Work</h2>
                  <p>Some information about the materials or options can go hereSome information about the materials or options can go here</p>
@@ -186,7 +189,7 @@
              </div>
          </section>
 
-        <section id="contact" class="section_contact">
+        <section id="Contact" class="section_contact">
             <div class="wrapper">
                 <h1>Lets Talk About</h1>
                 <form action="submit">
@@ -207,7 +210,7 @@
             </div>
         </section>
 
-        <section class="section_style">
+        <section id="Styles" class="section_style">
             <div class="wrapper">
                  <h2>Which Style is Right for You</h2>
                  
@@ -275,11 +278,11 @@
     <div class="mobile_nav_wrapper">
         <nav class="nav_mobile">
             <div class="logo"></div>
-            <a class="navlink home on" onclick="scrollToElementId('home')">Home</a>
+            <a class="navlink home on" onclick="scrollToElementId('Body')">Home</a>
             <a class="navlink services" onclick="scrollToElementId('About')">About</a>
             <a class="navlink contact" onclick="scrollToElementId('Styles')">Styles</a>
-            <a class="navlink trust"  onclick="scrollToElementId('Out Work')">Our Work</a>
-            <a class="navlink trust"  onclick="scrollToElementId('Contact Us')">Contact Us</a>
+            <a class="navlink trust"  onclick="scrollToElementId('Work')">Our Work</a>
+            <a class="navlink trust"  onclick="scrollToElementId('Contact')">Contact Us</a>
             <div class="bottom-buttons">
                 <button class="btn btn-phone">Call Us</button>
                 <button class="btn btn-primary">Get a Quote</button>
@@ -339,7 +342,7 @@
         let $location = $(element).offset().top;
         let newLoc = $(element).offset().top - 75;
         $('html, body').animate({
-           'scrollTop':   newLoc
+           'scrollTop':   $location
          }, 0);
          $('.navlink').removeClass('on');
          $('.navlink.'+loc).addClass('on');
