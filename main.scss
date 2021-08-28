@@ -3,6 +3,7 @@ section {
 	z-index:100;
 }
 
+
 :root {
 
     --max-content-width: 1440px;
@@ -62,10 +63,18 @@ h5 {
     font-size:16px;
 }
 
+.mobileheading{
+    display:none;
+}
+
 p {
     line-height: 140%;
     font-family: 'Roboto', sans-serif;
     color:var(--color-light-text);
+}
+
+.link-phone {
+    font-family: 'Roboto', sans-serif;
 }
 
 .ul {
@@ -146,7 +155,7 @@ nav {
         align-self: flex-start;
         padding-right:60px;
         background-image:url(images/arrow-right-orange_24px.svg);
-        background-position: 60px center;
+        background-position: 90px center;
         background-repeat:no-repeat;
     }
 }
@@ -212,6 +221,7 @@ footer,
         .nav_main {
             flex-grow: 1;
             margin: 0 12%;
+            max-width:500px;
             transition: 0.2s;
             display: flex;
             justify-content: space-between;
@@ -247,7 +257,6 @@ footer,
             .nav_main {
                 margin: 0 13%;
                 font-size:18px;
-                max-width:600px;
                 a {
                     padding-top:5px;
                     &.on {
@@ -320,6 +329,7 @@ footer,
     }
     .pane-strip {
         display:flex;
+        flex-wrap:nowrap;
     }
     img{
         width:100%;
@@ -344,7 +354,7 @@ footer,
         text-decoration: none;
         &:hover {
             .btn-small-text {
-                background-position: 80px center;
+                background-position: 110px center;
             }
             .card {
                 // background:var(--color-primary-blue);
@@ -360,7 +370,7 @@ footer,
             }
         }
     }
-    .wrapper{
+    .colwrap{
         display:flex;
         justify-content:center;
         h1 {
@@ -369,7 +379,7 @@ footer,
         }
         p {
             margin:0;
-            padding:50px 0 30px 30px;
+            padding:20px 0 0 30px;
         }
         .col1{
             margin-right:16px;
@@ -615,6 +625,9 @@ footer,
     background-color:var(--color-dark-blue);
     color:#fff;
     padding-bottom:100px;
+    h1 {
+        margin-top:150px;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -790,6 +803,59 @@ footer,
 
 @media screen and (max-width: 880px) {
 
+    .section_style .style-card-wrap {
+        justify-content: unset;
+        flex-wrap: nowrap;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-left:30px;
+        overflow: auto;
+        .style-card {
+            max-width:720px;
+            width:auto;
+            margin-right:30px;
+        }
+    }
+
+    .section_dobest .card {
+        width:320px;
+    }
+
+    .section_dobest .card .image-box img {
+        width:150%;
+    }
+
+    .mobileheading{
+        display:block;
+    }
+    .desktopheading{
+        display:none;
+    }
+
+    .section_dobest .wrapper h1 {
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .section_dobest .wrapper .colwrap {
+        display:flex;
+        justify-content: unset;
+        margin-left:-30px;
+        margin-right:-30px;
+        padding-left:30px;
+        overflow:auto;
+        a {
+            margin-right:20px;
+        }
+        .col1,
+        .col2 {
+            display:flex;
+            p.aside {
+                display:none;
+            }
+        }
+    }
+
     .section_latest .gallery .col2 .row1 .col1 {
         display:none;
     }
@@ -815,7 +881,7 @@ footer,
     .section_dobest .wrapper .col1{
         margin-right:0;
     }
-    .section_latest .mobile_col1{
+    .section_latest .mobile_col1.on{
         display:block;
     }
 
@@ -873,9 +939,12 @@ footer,
         flex-direction:column;
     }
 
-    .section_dobest .wrapper {
-        flex-direction:column;
+    .section_dobest .wrapper .colwrap {
         align-items: center;
+        .col1,
+        .col2 {
+            width:auto;
+        }
     }
 
     nav{
@@ -931,6 +1000,8 @@ footer,
             margin-top:30px;
         }
     }
+
+
    
 }
 
@@ -980,7 +1051,17 @@ footer,
         }
     }
 
-    
+    .section_hero {
+        height:680px;
+    }
+    .pane-strip-wrap {
+        width:100%;
+        overflow:hidden;
+    }
+    .pane-strip {
+        width:150%;
+        position:relative;
+    }
 
     .section_dobest .wrapper h1 {
         margin: 0 auto 30px;
@@ -989,7 +1070,6 @@ footer,
 
     .section_dobest .card {
         margin:20px auto;
-        width:100%;
         .image-box {
             align-items:unset;
         }
@@ -1036,8 +1116,8 @@ footer,
     .section_style .style-card-wrap .style-card {
         flex-direction:column;
         margin: 20px auto;
-        width: 90%;
-        min-width:unset;
+        min-width: 320px;
+        margin-right:20px;
         img{
             width:100%;
         }
